@@ -1,4 +1,6 @@
 # Nekoboi
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwffzy%2Fnekoboi.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwffzy%2Fnekoboi?ref=badge_shield)
+
 Original Repository : <a href="https://github.com/MoonLGH/nekoWrap">@MoonLGH/NekoWrap</a></br>
 Real Note : You fr can get ip banned from neko by using this, i'm not responsible for that</br>
 another note for muslim user + indonesian : Dosa tanggung sendiri ya👍
@@ -174,3 +176,7 @@ const { Client } = require("nekoboi");
   client.close();
 })();
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwffzy%2Fnekoboi.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwffzy%2Fnekoboi?ref=badge_large)
