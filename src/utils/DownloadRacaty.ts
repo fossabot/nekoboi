@@ -28,7 +28,7 @@ export async function extract(url:string) {
 
   const regex = /(https?:\/\/racaty\.(io|com)\/([a-zA-Z\d]{12}))/;
   const match = url.match(regex);
-  const _id = match[3];
+  const _id = match![3];
 
   const payload = 'op=download2&id=' + _id + '&rand=&referer=&method_free=&method_premium=';
 
