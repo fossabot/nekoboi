@@ -101,7 +101,7 @@ async function Mirror() {
 
 // Racaty Bypass
 async function parseRacaty(){
-    let {link,name} = await client.parseRacaty("https://racaty.com/5p7mglv5k4vx")
+    let {link,name} = await client.downloadRacaty("https://racaty.com/5p7mglv5k4vx")
     
     console.log(link)
     // Expected output : String
@@ -154,14 +154,14 @@ const { Client } = require("nekoboi");
           console.log("OUO [ "+url+" ]")
           console.log("OUO2 [ "+url2+" ]")
           url = url+""
-          const downloads = await client.bypassMirrored(url!)
+          const downloads = await client.bypassMirrored(url)
           console.log(`this downloads: ${downloads}`)
-          let zs = downloads.find(ar => ar.host.toLowerCase().includes("zippy"))?.url
-          console.log(`this zs ${zs}`)
-          if(!zs) return
-          let {link,name} = await client.parseZippy(zs!)
+          let rc = downloads.find(ar => ar.host.toLowerCase().includes("racaty"))?.url
+          console.log(`this rc ${zs}`)
+          if(rc) return
+          let {link,name} = await client.parseRacaty(rc)
           console.log(`this link : ${link} \nThis Name : ${name}`)
-          const data = await client.downloadZippy(link,{fileName:name})
+          const data = await client.downloadRacaty(link,{fileName:"NotYourZy.mp4"})
           // data.on("data",(chunk:Buffer)=>{
           // })
           data.on("end",()=>{
