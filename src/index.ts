@@ -8,7 +8,7 @@ import { fetch } from "./lib/fetchHentai";
 import { fetchEps } from "./lib/fetchEpisode";
 import { bypassOuo, bypassOuo2 } from "./utils/bypassOuo";
 import { bypassMirrored } from "./utils/bypassMirror";
-import { downloadZippy, parse } from "./utils/DownloadZippy";
+import { downloadRacaty, extract } from "./utils/DownloadRacaty";
 import { DownloadOption, genrelistType } from "./utils/interfaces";
 import { genrelist } from "../src/utils/constants";
 export class Client {
@@ -86,17 +86,15 @@ export class Client {
     }
     return fetchEps(this.pupBrowser!,id)
   }
-
-  async parseZippy(url:string) {
+async parseRacaty(url:string) {
     if(!url)throw Error("Please Put Url")
-    return await parse(url)
+    return await extract(url)
   }
-
-  async downloadZippy(url:string,options:DownloadOption){
+async downloadRacaty(url:string,options:DownloadOption){
     if(!url)throw Error("Please Put Url")
     if(!options)throw Error("Please fileName on the options")
     if(!options.fileName) throw Error("options format is not correct")
-    return await downloadZippy(url,options)
+    return await downloadRacaty(url,options)
   }
   async close() {
     this.checkInitialize();

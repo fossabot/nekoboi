@@ -5,8 +5,8 @@ another note for muslim user + indonesian : Dosa tanggung sendiri ya👍
 
 ## TODO
 
-[] make seperate of zippy utils so if zs scraper broke, we dont need patches</br>
-[] Implement Genres </br>
+[✓] Change Zippyshare To Racaty Download</br>
+[✓] Implement Genres </br>
 [] Add more examples </br>
 
 ## Install
@@ -99,23 +99,21 @@ async function Mirror() {
     // Returns : Mirror[]
 }
 
-// ZippyShare Bypass
-async function parseZippy(){
-    let {link,name} = await client.parseZippy("https://www65.zippyshare.com/v/BLUflQh4/file.html")
-
+// Racaty Bypass
+async function parseRacaty(){
+    let {link,name} = await client.parseRacaty("https://racaty.com/5p7mglv5k4vx")
+    
     console.log(link)
     // Expected output : String
-
     // Get Name File
     console.log(name)
-
     // Expected output : String
 }
 
-// Download Zippyshare [ Not Working, Bcs Zippyshare has stopped operating  :) ]
-async function downloadZippy(){
-    // Combine With parseZippy
-    const res = await client.downloadZippy(link, { fileName: name })
+// Download Racaty
+async function downloadRacaty(){
+    // Combine With parseRacaty
+    const res = await parseRacaty(link, { fileName: name })
     // Expected output : mp4
 }
 
