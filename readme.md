@@ -113,7 +113,7 @@ async function parseRacaty(){
 // Download Racaty
 async function downloadRacaty(){
     // Combine With parseRacaty
-    const res = await parseRacaty(link, { fileName: name })
+    const res = await downloadRacaty(link, { fileName: name })
     // Expected output : mp4
 }
 
